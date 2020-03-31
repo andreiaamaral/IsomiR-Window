@@ -13,11 +13,11 @@ The IsomiR Window web-interface allows:
 
  ## Instalation and usage
 
-For full details about how to install and use the IsomiR Window software, please read the IsomiRWindow_install.pdf
+The IsomiR Window is deployed in a Virtual Machine (download it at http://isomir.fc.ul.pt). For full details about how to install and use the IsomiR Window VM, please read the IsomiRWindow_install.pdf
 
 ### Prerequisites
 
-There are NO PREREQUISITES for IsomiR Window VM, all software is already installed within the VM as well as all the IsomiR Window source code. Just follow the  installation manual: IsomiR Window_install.pf
+There are NO PREREQUISITES for IsomiR Window VM, all software is already installed within the VM as well as all the IsomiR Window source code. Just follow the  installation manual: IsomiR Window_install.pdf
 
 But in case you want to run the IsomiR Window pipeline in standalone mode without installing the VM you will need the following third software:
 
@@ -47,7 +47,7 @@ topGO 2.26.0
 
 
 
-### Using the standalone IsomiR Window pipeline
+## Using the IsomiR Window standalone pipeline
 
 Step 1- create the directory tree required for output and log processing files
 
