@@ -108,10 +108,23 @@ Species code
  
  running command
  
-    perl <directoryforscript>/find_ncRNAs.pl  <pathto>/Knowledge_bases./ <pathto>/fastq_file <pathto>/results_IsomiR_window/bowtie_stats, <pathto>/Log_processing_files <pathto>/Log_done_files <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/Htseq_outputs/individual_ncRNAs <pathto>/Htseq_outputs/counts_ncRNAs <name_fastq_file> <NM> <NMH> <species code>
+    perl <directoryforscript>/find_ncRNAs.pl  <pathto>/Knowledge_bases./ <pathto>/fastq_file <pathto>/results_IsomiR_window/bowtie_stats, <pathto>/Log_processing_files <pathto>/Log_done_files <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/Htseq_outputs/individual_ncRNAs <pathto>/Htseq_outputs/counts_ncRNAs <pathto>/fastq_file/<name_fastq_file> <NM> <NMH> <species code>
  
  
+### Step 4 -create the directory tree required for result outputs of find_isomiRs.pl
+/find_isomirs_results
+/find_isomirs_results/isomirs
+/find_isomirs_results/isomirs/ambiguous
+/find_isomirs_results/isomirs/not_ambiguous
+/find_isomirs_results/SAMs_VCFs
+
+### Step 5 -download and run find_isomiRs.pl
+ It requires Species.pl and species_hash.txt
  
+ running command
+ 
+    perl <directoryforscript>/find_isomiRs.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/not_ambiguous <pathto>/ambiguous <pathto>/filtered_SAM/<nameof_filtered_SAMfile> <species code>
+
  
  
 
