@@ -69,5 +69,13 @@ then inside this one create subdirectories
 
 /Htseq_outputs/counts_ncRNAs --> counts per snRNA category.
 
-Step 2 - create the directory with required inputs
+### Step 2 - create the directory tree required for input files 
+
+/fastq_file --> directory with fastq files (files should be trimmed for adapters and advised to be already filtered for read quality)
+
+/Knowledge_bases --> directory with genome assemblies (fasta and indexed genomes), RNAcentral.gff3 and miRBase.gff (to receive these knowledge bases please send email to isomiR_window1.0@gmail.com write species code in subject. Then you will receive a link to transfer all the required files.
+
+
+
+
 
