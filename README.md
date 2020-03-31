@@ -75,6 +75,24 @@ then inside this one create subdirectories
 
 /Knowledge_bases --> directory with genome assemblies (fasta and indexed genomes), RNAcentral.gff3 and miRBase.gff (to receive these knowledge bases please send email to isomiR_window1.0@gmail.com write species code in subject. Then you will receive a link to transfer all the required files.
 
+Species code 
+            Bos_taurus
+            Canis_familiaris
+            Capra_hircus
+            Danio_rerio
+            Drosophila_melanogaster
+            Equus_caballus
+            Gallus_gallus
+            Homo_sapiens
+            Mus_musculus
+            Ovis_aries
+            Pan_troglodytes
+            Rattus_norvegicus
+            Sus_scrofa
+            
+            Arabidopsis_thaliana
+            Brachypodium_distachyon
+
 
 
 
