@@ -78,33 +78,26 @@ then inside this one create subdirectories
 Species code 
             
             Bos_taurus
-            
             Canis_familiaris
-            
             Capra_hircus
-            
             Danio_rerio
-            
             Drosophila_melanogaster
-            
             Equus_caballus
-            
             Gallus_gallus
-            
             Homo_sapiens
-            
             Mus_musculus
-            
             Ovis_aries
-            
             Pan_troglodytes
-            
             Rattus_norvegicus
-            
             Sus_scrofa
             
             Arabidopsis_thaliana
             Brachypodium_distachyon
+            Oryza_sativa
+            Solanum_lycopersicum
+            Sorghum_bicolor
+            Vitis_vinifera
+            Zea_mays
 
 
 
