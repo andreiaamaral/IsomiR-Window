@@ -55,17 +55,19 @@ Step 1- create the directory tree required for output and log processing files
 
 then inside this one create subdirectories
 
-/bowtie_stats -->
+/bowtie_stats --> files with bowtie alignment statistics
 
-/Log_processing_files -->
+/Log_processing_files --> files with alignment log
 
-/Log_done_files -->
+/Log_done_files --> log for rRNA filtering
 
 /filtered_SAM --> in this directory  results of the alignment file are produced. *filtered.sam: alignment file filtered for rRNA reads
 
-/individual_SAM_results -->
+/individual_SAM_results --> original alignment file before filtering for rRNA
 
-/individual_ncRNAs -->
+/Htseq_outputs/individual_ncRNAs --> counts per sncRNA feature. miRNAs are not counted at this stage
 
-/counts_ncRNAs --> 
+/Htseq_outputs/counts_ncRNAs --> counts per snRNA category.
+
+Step 2 - create the directory with required inputs
 
