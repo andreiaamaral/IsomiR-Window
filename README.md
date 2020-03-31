@@ -100,6 +100,19 @@ Species code
             Zea_mays
 
 
-
+### Step 3 - download and run find_ncRNAs.pl
+ It requires Species.pl and species_hash.txt
+ NM= number of mismatches for alignment
+ NMH= number of allowed multiple hits for aligment
+ Bowtie runs in --best strata-- setting
+ 
+ running command
+ 
+    perl <directoryforscript>/find_ncRNAs.pl  <pathto>/Knowledge_bases./ <pathto>/fastq_file <pathto>/results_IsomiR_window/bowtie_stats, <pathto>/Log_processing_files <pathto>/Log_done_files <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/Htseq_outputs/individual_ncRNAs <pathto>/Htseq_outputs/counts_ncRNAs <name_fastq_file> <NM> <NMH> <species code>
+ 
+ 
+ 
+ 
+ 
 
 
