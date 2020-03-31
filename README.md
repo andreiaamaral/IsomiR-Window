@@ -49,7 +49,7 @@ topGO 2.26.0
 
 ## Using the IsomiR Window standalone pipeline
 
-Step 1- create the directory tree required for output and log processing files
+### Step 1 - create the directory tree required for output and log processing files
 
 /results_IsomiR_window
 
