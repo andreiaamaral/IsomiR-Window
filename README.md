@@ -124,6 +124,22 @@ Species code
  running command
  
     perl <directoryforscript>/find_isomiRs.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/not_ambiguous <pathto>/ambiguous <pathto>/filtered_SAM/<nameof_filtered_SAMfile> <species code>
+    
+### Step 6 -miRNA prediction and incorporation of novel miRNAs in the species miRNA annotation
+The IsomiR Window pipeline provides a script that can be used before step 5. This script enables de identification of novel miRNAs based in your data and allows if you desire to add these novel miRNAs to the annotation of miRNAs of the corresponding species. In case you execute this script before find_isomiRs.pl, you will be able to identify the isomiRs that have been generated for these novel miRNAs as well.
+
+You will see that in the command flag options <pathto>/filtered_SAM is repeated twice, this is due to the fact that the IsomiR Window web interface is designed for the comparison of two experimental conditions. In case you have that design  you will use <pathto>/C1/filtered_SAM and <pathto>/C2/filtered_SAM, otherwise you just repeat the same path twice.
+
+Before you run the script you must create two new folders:
+
+/find_isomirs_results/miRprediction_input --> here it will be written the input files required for miRDeep2 (miRNA prediction for animal genomes) or miRDP2 (miRNA prediction for plant genomes) and that are created from the SAM file input 
+
+/find_isomirs_results/miRprediction_results--> here it will be written the results of the novel miRNA prediction 
+
+running command
+
+
+    perl <directoryforscript>/mirdeep.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/filtered_SAM /find_isomirs_results/miRprediction_input /find_isomirs_results/miRprediction_results yes <species code> <'C1', 'C2' ou 'both'> <minimum read stack (10, 50 ou 100)> <use annotation in prediction ("yes", "no")> <add novel miRNAs to annotation ("yes", "no")>
 
  
  
