@@ -125,7 +125,37 @@ Species code
  
     perl <directoryforscript>/find_isomiRs.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/not_ambiguous <pathto>/ambiguous <pathto>/filtered_SAM/<nameof_filtered_SAMfile> <species code>
     
-### Step 6 -miRNA prediction and incorporation of novel miRNAs in the species miRNA annotation
+    
+### Step 6 - prepare matrix of isomiR counts and of ncRNA counts accross all replicates in two experimental conditions, perform testing for differential expression using Deseq. Download scripts Deseq.pl and Rdeseq.R
+
+this script has been createdto generate read count matrices of two experimental conditions so it requires the existance of the following directories:
+
+C1/find_isomirs_results/isomirs/not_ambiguous
+C2/find_isomirs_results/isomirs/not_ambiguous
+/input_DESeq
+/log_DESeq
+
+running command
+
+     perl <directoryforscript>/deseq.pl <jobID> <pathto>/C1/find_isomirs_results/isomirs/not_ambiguous <pathto>/C2/find_isomirs_results/isomirs/not_ambiguous <pathto>/C1/Htseq_outputs/individual_ncRNAs <pathto>/C2/Htseq_outputs/individual_ncRNAs /input_DESeq /log_DESeq <paired or unpaired>
+
+after this step the required inputs for differential expression testing for IsomiRs and for ncRNAs are prepared
+create diretory to send Deseq analysis outputs
+/output_DESeq
+
+then 
+
+running command
+
+    Rscript Rdeseq.R <jobID> /input_DESeq /output_DESeq <choose design: paired or unpaired> <choose p-value: 0.05 or 0.10>
+
+    
+### Step 7 - create charts of previous analysis: read length distribution, ncRNA counts, miRNA count matrix and IsomiR count matrix
+
+this script allows to create summary tables that can be used to produce bar charts of read length distribution, piecharts of the porportion of ncRNAs and of miRNA biogenesis (3' or 5' arm) and it agregates the miRNA and/or IsomiR counts, creating two matrixes, miRNA counts (
+
+
+### Step 8 -miRNA prediction and incorporation of novel miRNAs in the species miRNA annotation
 The IsomiR Window pipeline provides a script that can be used before step 5. This script enables de identification of novel miRNAs based in your data and allows if you desire to add these novel miRNAs to the annotation of miRNAs of the corresponding species. In case you execute this script before find_isomiRs.pl, you will be able to identify the isomiRs that have been generated for these novel miRNAs as well.
 
 You will see that in the command flag options <pathto>/filtered_SAM is repeated twice, this is due to the fact that the IsomiR Window web interface is designed for the comparison of two experimental conditions. In case you have that design  you will use <pathto>/C1/filtered_SAM and <pathto>/C2/filtered_SAM, otherwise you just repeat the same path twice.
@@ -140,8 +170,15 @@ running command
 
 
     perl <directoryforscript>/mirdeep.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/filtered_SAM /find_isomirs_results/miRprediction_input /find_isomirs_results/miRprediction_results yes <species code> <'C1', 'C2' ou 'both'> <minimum read stack (10, 50 ou 100)> <use annotation in prediction ("yes", "no")> <add novel miRNAs to annotation ("yes", "no")>
-
+    
+    
+### Step 6 - testing for differential expression
  
+ This script can be used to read the matrix of miRNA counts () or the matrix of IsomiR counts()
  
+ Rscript ID >deseq_file <- args[2]
+path_results <- args[4]
+paired_unpaired <- args[5]
+pvalue <- args[6]
 
 
