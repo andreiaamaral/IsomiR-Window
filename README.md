@@ -154,6 +154,7 @@ running command
 
 this script allows to create summary tables that can be used to produce bar charts of read length distribution, piecharts of the porportion of ncRNAs and of miRNA biogenesis (3' or 5' arm) and it agregates the miRNA and/or IsomiR counts, creating two matrixes, miRNA counts (
 
+### I still need to finish step7
 
 ### Step 8 -miRNA prediction and incorporation of novel miRNAs in the species miRNA annotation
 The IsomiR Window pipeline provides a script that can be used before step 5. This script enables de identification of novel miRNAs based in your data and allows if you desire to add these novel miRNAs to the annotation of miRNAs of the corresponding species. In case you execute this script before find_isomiRs.pl, you will be able to identify the isomiRs that have been generated for these novel miRNAs as well.
@@ -169,16 +170,8 @@ Before you run the script you must create two new folders:
 running command
 
 
-    perl <directoryforscript>/mirdeep.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/filtered_SAM /find_isomirs_results/miRprediction_input /find_isomirs_results/miRprediction_results yes <species code> <'C1', 'C2' ou 'both'> <minimum read stack (10, 50 ou 100)> <use annotation in prediction ("yes", "no")> <add novel miRNAs to annotation ("yes", "no")>
+    perl <directoryforscript>/mirdeep.pl <jobID> <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/filtered_SAM /find_isomirs_results/miRprediction_input /find_isomirs_results/miRprediction_results yes <species code> <'C1', 'C2' ou 'both'> <minimum read stack (10, 50 ou 100)> <use annotation in prediction ("yes", "no")> <add novel miRNAs to annotation ("yes", "no")>
     
-    
-### Step 6 - testing for differential expression
- 
- This script can be used to read the matrix of miRNA counts () or the matrix of IsomiR counts()
- 
- Rscript ID >deseq_file <- args[2]
-path_results <- args[4]
-paired_unpaired <- args[5]
-pvalue <- args[6]
+
 
 
