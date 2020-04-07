@@ -223,5 +223,5 @@ R_topGO.R
 targetfinder.pl
 targetscan_70.pl
 
-command
-                                        perl
+command 
+                                    perl <directoryforscript>/mirdeep.pl <jobID> <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/filtered_SAM /find_isomirs_results/miRprediction_input /find_isomirs_results/miRprediction_results yes <species code> <'C1', 'C2' ou 'both'> <minimum read stack (10, 50 ou 100)> <use annotation in prediction ("yes", "no")> <add novel miRNAs to annotation ("yes", "no")>
