@@ -56,5 +56,8 @@ The annotation module has the follwoing main features:
 -quantifies ncRNAs, miRNAs and IsomiRs
 -tests for differential expression
 -predicts novel miRNAs
-**For step by step instructions go to the IsomiR Window wiki **
+**For step by step instructions go to the IsomiR Window wiki**
+
+https://github.com/andreiaamaral/IsomiR-Window/wiki 
+
 
