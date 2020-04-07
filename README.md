@@ -19,7 +19,7 @@ The IsomiR Window is deployed in a Virtual Machine (download it at http://isomir
 
 ### Prerequisites
 
-There are **NO PREREQUISITES** for IsomiR Window VM, all software is already installed within the VM as well as all the IsomiR Window source code. Just follow the  installation manual: IsomiR Window_install.pdf
+There are **NO PREREQUISITES** for **IsomiR Window VM**, all software is already installed within the VM as well as all the IsomiR Window source code. Just follow the  installation manual: IsomiR Window_install.pdf
 
 But in case you want to run the IsomiR Window pipeline in standalone mode without installing the VM you will need the following third software:
 
