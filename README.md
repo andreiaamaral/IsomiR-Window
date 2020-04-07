@@ -1,7 +1,7 @@
 ![](https://github.com/andreiaamaral/IsomiR-Window/blob/master/IsomirPNGcopy_logo.jpg)
 
 
-Isomir Window is system for analyzing small-RNA-seq data in an integrative and user-friendly manner
+ ### Isomir Window is system for analyzing small-RNA-seq data in an integrative and user-friendly manner
 
 MiRNAs are small-non-coding-RNA molecules with ~22 nt in length that control gene expression. IsomiRs are miRNA variants that vary in length and/or sequence when compared to their canonical forms and can display additions or deletions of one or more nucleotides at the 5' or 3' ends or both, internal editings or 3' end tailings. Consequently, isomiRs might regulate the expression of different targets in comparison to their respective canonical form, affecting the pathways of many known biological processes. 
 The IsomiR Window performs the integrated analysis of small-RNA-seq datasets from animals and plants with a user-friendly graphical interface, enabling the discovery of all types of miRNA variants through a Web application. 
