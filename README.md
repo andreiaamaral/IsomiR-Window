@@ -1,4 +1,4 @@
-![](https://drive.google.com/open?id=1FoaXnIRu-WGtK7TRgCdZu8CyV13iyrkB)
+![](https://github.com/andreiaamaral/IsomiR-Window/blob/master/Isomir_logo.jpg)
 
 # IsomiR-Window
 Isomir Window A system for analyzing small-RNA-seq data in an integrative and user-friendly manner
