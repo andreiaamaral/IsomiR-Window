@@ -47,7 +47,13 @@ topGO 2.26.0
 
 
 
-## Using the IsomiR Window standalone pipeline
+## Using the IsomiR Window standalone pipeline for the annotation module
+
+The annotation module has the follwoing main features:
+-maps reads to reference genome;
+-quantifies ncRNAs, miRNAs and IsomiRs
+-tests for differential expression
+-predicts novel miRNAs
 
 ### Step 1 - create the directory tree required for output and log processing files
 
@@ -203,6 +209,6 @@ running command
 
     perl <directoryforscript>/mirdeep.pl <jobID> <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/filtered_SAM /find_isomirs_results/miRprediction_input /find_isomirs_results/miRprediction_results yes <species code> <'C1', 'C2' ou 'both'> <minimum read stack (10, 50 ou 100)> <use annotation in prediction ("yes", "no")> <add novel miRNAs to annotation ("yes", "no")>
     
-the output is already 
+## Using the IsomiR Window standalone pipeline for the functional module
 
 
