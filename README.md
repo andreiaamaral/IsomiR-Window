@@ -132,7 +132,7 @@ Species code
     perl <directoryforscript>/find_isomiRs.pl <pathto>/Knowledge_bases <pathto>/filtered_SAM <pathto>/individual_SAM_results <pathto>/not_ambiguous <pathto>/ambiguous <pathto>/filtered_SAM/<nameof_filtered_SAMfile> <species code>
     
     
-### Step 6 - prepare matrix of isomiR counts and of ncRNA counts accross all replicates in two experimental conditions, perform testing for differential expression using Deseq. Download scripts: Deseq.pl and Rdeseq.R
+### Step 6 - Download scripts: Deseq.pl and Rdeseq.R. These scripts prepare matrix of isomiR counts and of ncRNA counts accross all replicates in two experimental conditions and perform testing for differential expression using Deseq. 
 
 this script has been created to generate read count matrices for ncRNAs and for IsomiRs of two experimental conditions so it requires the existance of the following directories:
 
@@ -166,7 +166,7 @@ b) file TableDE_'<jobID>'.txt' --> a Tab delimited matrix with the results of th
 d) file MAplot_'<jobID>'.pdf --> MA plot
 e) file heatmap_'<jobID>'.png --> heatmap displaying hierarquical clustering of samples including the top15 differentially expressed IsomiRs.
     
-### Step 7 - download charts.pl and run it to summary stats of previous analysis: read length distribution, ncRNA counts, isomiRs Biogenesis, frequency of IsomiR types and miRNA normalized count matrix 
+### Step 7 - Download charts.pl and run it to summary stats of previous analysis: read length distribution, ncRNA counts, isomiRs Biogenesis, frequency of IsomiR types and miRNA normalized count matrix 
 
 this script allows to create summary tables that can be used to produce bar charts of read length distribution, piecharts of the proportion of ncRNAs and of miRNA biogenesis (3' or 5' arm) and it further creates a matrix of normalized counts at miRNA level aggregating the complexity of isomIRs.
 
@@ -179,7 +179,7 @@ requires creating a directory for results:
 
 command
 
-     perl <jobID> <pathto>/C1/find_isomirs_results/isomirs/not_ambiguous <pathto>/C2/find_isomirs_results/isomirs/not_ambiguous <pathto>/C1/find_isomirs_results/isomirs/ambiguous <pathto>/C2/find_isomirs_results/isomirs/ambiguous 
+     perl charts.pl <jobID> <pathto>/C1/find_isomirs_results/isomirs/not_ambiguous <pathto>/C2/find_isomirs_results/isomirs/not_ambiguous <pathto>/C1/find_isomirs_results/isomirs/ambiguous <pathto>/C2/find_isomirs_results/isomirs/ambiguous 
 	<pathto>/C1/Htseq_outputs/individual_ncRNAs <pathto>/C2/Htseq_outputs/individual_ncRNAs <pathto>/charts_C1 <pathto>/charts_C2 <pathto>/summary_tables <speciescode>
  
  The outputs are:
@@ -193,10 +193,12 @@ command
  Final_TableDE_<jobID>.txt --> summary statistics of isomiR counts for each condition (mean and stdev)
  miRNA_normalized_counts_<jobID>.txt --> normalized miRNA counts for each replicate in each condition
 
-### Step 8 -miRNA prediction and incorporation of novel miRNAs in the species miRNA annotation
+### Step 8 -Download script mirdeep.pl and merged_arf_and_collapsed_id.pl to perform miRNA prediction and incorporation of novel miRNAs in the species miRNA annotation
 The IsomiR Window pipeline provides a script that can be used before step 5. This script enables de identification of novel miRNAs based in your data and allows if you desire you can add these novel miRNAs to the annotation of miRNAs of the corresponding species. In case you execute this script before find_isomiRs.pl, you will be able to identify the isomiRs that have been generated for these novel miRNAs as well. The script executes automatically miRdeep2 in caso of animal genomes or miRD2 in case of plant genomes. These predictions sometimes predict overlapping miRA percursors that overlap >=90%, the script creates an output that removes this redundancy, displaying in this case only the predictions with better score and better sequencing coverage. Nevertheless the full set of results is kept.
 
-You will see that in the command flag options <pathto>/filtered_SAM is repeated twice, this is due to the fact that the IsomiR Window web interface is designed for the comparison of two experimental conditions. In case you have that design  you will use <pathto>/C1/filtered_SAM and <pathto>/C2/filtered_SAM, otherwise you just repeat the same path twice. M
+You will see that in the command flag options <pathto>/filtered_SAM is repeated twice, this is due to the fact that the IsomiR Window web interface is designed for the comparison of two experimental conditions. In case you have that design  you will use <pathto>/C1/filtered_SAM and <pathto>/C2/filtered_SAM, otherwise you just repeat the same path twice. 
+	
+Requires: merged_arf_and_collapsed_id.pl
 
 Before you run the script you must create two new folders:
 
@@ -211,4 +213,15 @@ running command
     
 ## Using the IsomiR Window standalone pipeline for the functional module
 
+### Step 1 -Download functional.pl to perform miRNA target and gene set enrichmnet analysis on the set of identified targets 
+This script performs the following automated analysis: a) target prediction of miRNAs or isomiRs by invoking Miranda and/or TargetScan in the case of animal genomes or by invoking Targetfinder in the case of plant genomes.
 
+requires:
+
+Species.pl
+R_topGO.R
+targetfinder.pl
+targetscan_70.pl
+
+command
+                                        perl
